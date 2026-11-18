@@ -1,6 +1,13 @@
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.primary-nav');
 
+function closeMenu() {
+  menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.setAttribute('aria-label', 'Open navigation');
+  navigation?.classList.remove('is-open');
+  document.body.classList.remove('menu-open');
+}
+
 menuButton?.addEventListener('click', () => {
   const open = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!open));
@@ -9,12 +16,8 @@ menuButton?.addEventListener('click', () => {
   document.body.classList.toggle('menu-open', !open);
 });
 
-navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-  menuButton.setAttribute('aria-expanded', 'false');
-  menuButton.setAttribute('aria-label', 'Open navigation');
-  navigation.classList.remove('is-open');
-  document.body.classList.remove('menu-open');
-}));
+navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
 
 document.querySelectorAll('.filter').forEach(button => {
   button.addEventListener('click', () => {
@@ -59,6 +62,21 @@ if (waveform) {
     bar.style.height = `${height}px`;
     waveform.appendChild(bar);
   });
+}
+
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal, .reveal-item').forEach(element => revealObserver.observe(element));
+} else {
+  document.querySelectorAll('.reveal, .reveal-item').forEach(element => element.classList.add('is-visible'));
 }
 
 const sections = [...document.querySelectorAll('main section[id]')];
