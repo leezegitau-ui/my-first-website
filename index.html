@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta name="description" content="A portfolio-in-progress for Leezegitau — thoughtful digital experiences, design and development.">
+  <title>Leezegitau — Digital Designer & Developer</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <a class="wordmark" href="#top" aria-label="Leezegitau home">leeze<span>®</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="#work">Work <span>01</span></a>
+      <a href="#about">About <span>02</span></a>
+      <a href="#contact">Contact <span>03</span></a>
+      <a class="nav-availability" href="#contact"><i></i> Available for projects</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap" aria-labelledby="hero-title">
+      <div class="hero-topline"><span>INDEPENDENT DESIGNER & DEVELOPER</span><span>BASED IN NAIROBI · WORKING EVERYWHERE</span></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> HELLO, I'M LEEZEGITAU</p>
+        <h1 id="hero-title">Making the<br>digital feel <span class="serif-word">different.</span></h1>
+        <div class="hero-bottom">
+          <p class="hero-intro">I shape thoughtful digital experiences with a little bit of curiosity and a lot of care.</p>
+          <a class="round-link" href="#work" aria-label="Explore selected work"><span>↓</span></a>
+          <p class="hero-note">GOOD IDEAS DESERVE<br>GOOD EXECUTION.</p>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="sun-disc"></div><div class="art-label label-one">DESIGN<br>WITH INTENT</div>
+        <div class="art-label label-two">BUILD<br>WITH CARE</div>
+        <span class="art-star">✳</span><span class="art-dot"></span>
+      </div>
+      <div class="hero-footer"><span>SCROLL TO EXPLORE</span><span>01 — 04</span></div>
+    </section>
+
+    <section class="work section-wrap" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">A FEW THINGS I'VE BEEN EXPLORING</p><h2 id="work-title">Selected <span class="serif-word">work</span><sup>(03)</sup></h2></div>
+        <p class="section-aside">A collection of concepts and experiments.<br>More stories are taking shape.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="filter-button is-active" data-filter="all" aria-pressed="true">All <span>03</span></button>
+        <button class="filter-button" data-filter="design" aria-pressed="false">Design <span>02</span></button>
+        <button class="filter-button" data-filter="development" aria-pressed="false">Development <span>02</span></button>
+      </div>
+      <div class="project-grid">
+        <article class="project-card project-large" data-category="design development">
+          <a class="project-visual visual-orbit" href="#contact" aria-label="Discuss the Fieldnotes concept">
+            <div class="field-window"><span class="window-label">FIELDNOTES®</span><span class="field-big">Go<br>outside<span>.</span></span><span class="field-bottom">A LITTLE MORE WILD, EVERY DAY.</span><div class="field-shape"></div><span class="field-cta">EXPLORE THE TRAIL ↗</span></div>
+            <span class="visual-index">CONCEPT 01 / 03</span>
+          </a>
+          <div class="project-meta"><div><h3>Fieldnotes</h3><p>A slower kind of outdoor journal.</p></div><span>BRAND · WEB DESIGN</span></div>
+        </article>
+        <article class="project-card project-small" data-category="design">
+          <a class="project-visual visual-still" href="#contact" aria-label="Discuss the Still Life concept">
+            <div class="still-card"><span class="still-top">STILL LIFE — NO. 08</span><div class="still-flower"><i></i><i></i><i></i><i></i><b></b></div><span class="still-title">A moment<br>to yourself.</span><span class="still-bottom">OBJECTS FOR QUIETER DAYS</span></div>
+            <span class="visual-index">CONCEPT 02 / 03</span>
+          </a>
+          <div class="project-meta"><div><h3>Still Life</h3><p>Objects for the softer hours.</p></div><span>ART DIRECTION</span></div>
+        </article>
+        <article class="project-card project-small" data-category="development">
+          <a class="project-visual visual-signal" href="#contact" aria-label="Discuss the Signal concept">
+            <div class="signal-card"><span class="signal-mark">S.</span><span class="signal-pill">YOUR NEXT FAVORITE SOUND</span><h4>Find your<br>frequency.</h4><div class="waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="signal-play">▶</span></div>
+            <span class="visual-index">CONCEPT 03 / 03</span>
+          </a>
+          <div class="project-meta"><div><h3>Signal</h3><p>A new way to find your next listen.</p></div><span>WEB DEVELOPMENT</span></div>
+        </article>
+      </div>
+      <p class="work-footnote">These are self-initiated concept projects, made to explore ideas and craft. <span>Want to make something real? <a href="#contact">Let's talk ↗</a></span></p>
+    </section>
+
+    <section class="manifesto" id="about" aria-labelledby="about-title">
+      <div class="manifesto-inner section-wrap">
+        <p class="eyebrow">A LITTLE ABOUT HOW I WORK</p>
+        <h2 id="about-title">Good work starts with <span class="manifesto-highlight">paying attention.</span> To the details, the people, and the things that make an idea <span class="serif-word">matter.</span></h2>
+        <div class="manifesto-bottom"><span>DESIGN-LED. DETAIL-DRIVEN. ALWAYS LEARNING.</span><a href="#contact">A BIT MORE ABOUT ME <span>↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="approach section-wrap" aria-labelledby="approach-title">
+      <div class="approach-intro"><p class="eyebrow">WHAT I BRING TO THE TABLE</p><h2 id="approach-title">Small details.<br><span class="serif-word">Big picture.</span></h2></div>
+      <div class="approach-list">
+        <article><span class="approach-number">01</span><div><h3>Digital design</h3><p>Clear, considered interfaces that make the complicated feel simple.</p></div><span class="approach-arrow">↗</span></article>
+        <article><span class="approach-number">02</span><div><h3>Web development</h3><p>Responsive, accessible websites built to work beautifully everywhere.</p></div><span class="approach-arrow">↗</span></article>
+        <article><span class="approach-number">03</span><div><h3>Creative direction</h3><p>A coherent visual voice that helps good ideas find their people.</p></div><span class="approach-arrow">↗</span></article>
+      </div>
+    </section>
+
+    <section class="contact section-wrap" id="contact" aria-labelledby="contact-title">
+      <div class="contact-top"><p class="eyebrow">HAVE A GOOD ONE IN MIND?</p><span>MY INBOX IS OPEN&nbsp; ↘</span></div>
+      <h2 id="contact-title">Let's make<br>something <span class="serif-word">matter.</span></h2>
+      <div class="contact-bottom"><a class="email-link" href="mailto:hello@leezegitau.com">hello@leezegitau.com <span>↗</span></a><button class="copy-button" type="button" data-email="hello@leezegitau.com">COPY EMAIL</button><p>GOOD PROJECTS BEGIN WITH A CONVERSATION.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-wrap"><a class="wordmark" href="#top">leeze<span>®</span></a><p>MADE WITH CURIOSITY<br>© <span id="year"></span> LEEZEGITAU</p><div class="footer-links"><a href="#top">BACK TO TOP ↑</a><a href="mailto:hello@leezegitau.com">SAY HELLO ↗</a></div></footer>
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
